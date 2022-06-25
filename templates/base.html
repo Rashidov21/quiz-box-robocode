@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FRONTEND | Suyunbek Saydazimov / BACKEND | Nurullo Salaydinov">
+    <title>Robocode</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+    <link rel="icon" href="/static/img/favicon.svg">
+</head>
+<body>
+
+    <nav class="nav" id="home">
+        <div class="container">
+            <a href="/static//" class="nav_logo">
+                <img src="/static/img/LOGO.png" alt="">
+                <img src="/static/img/favicon.svg" alt="" class="phone_logo">
+            </a>
+
+            <div class="nav_buttons">
+                <a href="/static/#" class="btn choose_job_btn">Kasb tanlash</a>
+                <a href="/static/#" class="btn all_test_btn">Umumiy test</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <img src="/static/img/LOGO.png" alt="">
+                <p class="footer_text">O’quvchilar va qiziquvchilarni bilim darajalarini sinash <br> va yagona kirish imtihonini olish hamda kasb tanlashga ko’maklashuvchi  ilova.</p>
+                <p class="footer_text2">ROBOCODE IT ACADEMY 2022 yil</p>
+            </div>
+            <p class="footer_phone">+998 99 899 90 05</p>
+            <div class="social_media">
+                <a href="/static/#"><img src="/static/img/social1.png" alt=""></a>
+                <a href="/static/#"><img src="/static/img/social2.png" alt=""></a>
+                <a href="/static/#"><img src="/static/img/social3.png" alt=""></a>
+                <a href="/static/#"><img src="/static/img/social4.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll_up">
+        <a href="#home" class="scroll_up_btn"><img src="/static/img/scroll_up.png" alt=""></a>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>
