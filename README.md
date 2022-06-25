@@ -1,2 +1,4 @@
-# onestore
- Django One_Store app, shopping project
+### Quzi-Box Django Project
+ Django Quiz Box  project
+ 
+ 
