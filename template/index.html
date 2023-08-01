@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="banner">
+    <div class="container">
+        <div class="banner-content flex-box d-flex justify-content-between" data-aos="fade-down">
+            <div class="text-wrapper">
+                <h1>Qaysi IT kasbi sizga mos <br> kelishini bilib oling.</h1>
+
+                <p class="mt-2">IT ga qiziqasiz lekin qaysi yo’nalishi sizga mos kelishini bilmayapsizmi ? <br>
+                    15 daqiqa vaqtingizni sarflab IT da qaysi kasb siz uchun mos kelishini <br> bilib oling</p>
+
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'quiz_box:quiz' %}"><button class="button-light mx-2">Kasb
+                            tanlash</button></a>
+                    {% else %}
+                    <button class="button-light mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal1">Kasb
+                        tanlash</button>
+                    {% endif %}
+            </div>
+            <div class="img-wrapper">
+                <img src="{% static 'assets/images/Work-Essentials 1.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="all-tests">
+    <div class="container">
+        <div class="tests-title">
+            <h4>Barcha testlar</h3>
+        </div>
+
+        <div class="tests-content">
+         
+            <a href="./quiz.html" class="card" data-aos="zoom-in">
+                <img src="{{ quiz.image.url }}" alt="">
+
+                <h3 class="fw-bold">Django</h3>
+                <p>33 savol 33 min</p>
+            </a>
+            
+        </div>
+    </div>
+</section>
+<section class="banner">
+    <div class="container">
+        <div class="banner-content flex-box d-flex justify-content-between" data-aos="fade-up">
+            <div class="text-wrapper">
+                <h1>Robocode IT Academy talabasi uchun</h1>
+
+                <p class="mt-2">Ichki nazorat imtihonlari , orqaliq imtihoni va modul testlarni ishlash uchun
+                    berilgan bir martalik paroldan foydalanib kirish va test topshirish imkoni mavjud.</p>
+
+                <button class="button-light mt-2 second-banner-btn" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Kirish</button>
+            </div>
+
+            <div class="img-wrapper">
+                <img src="{% static 'assets/images/Team 1.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="results">
+    <div class="container">
+        <div class="results-content d-flex-justfiy-content-between mb-5" data-aos="fade-up">
+            <div class="info">
+                <img src="{% static 'assets/images/Stats 1.png' %}" alt="">
+
+                <h1>So'nngi natijalar <br> bilan tanishing.</h1>
+            </div>
+
+            <div class="list">
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+                <li>
+                    <p class="number">1</p>
+                    <p class="name">MuhammadAziz</p>
+                    <p> Muhammediyorov</p>
+                    <p class="programming-language">Python</p>
+                    <p class="points">30/27</p>
+                    <p class="time">23min</p>
+                </li>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Login Modal -->
+
+<div class="modal fade login-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="cross" data-bs-dismiss="modal" aria-label="Close"><img src="assets/icons/cross.svg"
+                    alt=""></button>
+
+            <h1>ROBOCODE IT ACADEMY <br>
+                o'quvchilari bo'limiga o'tish</h1>
+
+            <p>Administratsiya tomonidan berilgan login <br> hamda paroldan foydalaning.</p>
+
+            <form action="/register/login/" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Login">
+                <input type="password" name="password" placeholder="Parol">
+                <button type="submit" class="button-light sign-in-btn">
+                    Kirish
+            </button>
+            </form>
+
+
+                
+        </div>
+    </div>
+</div>
+{% endblock %}

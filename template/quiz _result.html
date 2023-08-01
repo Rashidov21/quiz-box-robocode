@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/quiz.css">
+    <link rel="stylesheet" href="./assets/css/home_page.css">
+
+    <title>Quiz test</title>
+</head>
+<style>
+    .container {
+  max-width: 1120px;
+  margin: auto;
+}
+
+    .content h2 {
+        color: var(--black, #2D2A43);
+        font-family: "Poppins", sans-serif;
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .content>p {
+        color: var(--black, #2D2A43);
+        font-family: 'Poppins', sans-serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        width: 90%;
+        line-height: normal;
+    }
+
+    .content>p>span {
+        color: var(--red, #FD9979);
+        font-family: 'Poppins', sans-serif;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .content2 {
+        color: #000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 90%;
+    }
+
+    .content2>p>span {
+        font-size: 24px;
+    }
+
+    @media screen and (max-width:830px) {
+        .content h2 {
+            font-size: 40px;
+
+        }
+        .content, .content2{
+            padding: 0px 0px 0px 19px;
+        }
+      
+        .content>p {
+            color: var(--black, #2D2A43);
+            font-size: 23px;
+        }
+
+        .content2>p {
+            font-size: 17px;
+            width: 90%;
+        }
+        .button-light{
+            
+            margin-left: 19px;
+
+        }
+    }
+
+    @media screen and (max-width:430px) {
+        .content h2 {
+            font-size: 33px;
+
+        }
+
+        .content>p {
+            color: var(--black, #2D2A43);
+            font-size: 19px;
+        }
+
+        .content>p>span {
+            font-size: 19px;
+        }
+
+        .content2>p {
+            font-size: 15px;
+            width: 90%;
+        }
+
+        .content2>p>span {
+            font-size: 18px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-none mt-2">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand"><img src="assets/images/Logo.svg" alt=""></a>
+                <div class=" btn-wrapper">
+                    <a href="./quiz.html">
+                        <button class="button-light mx-2" data-bs-toggle="modal" data-bs-target="#">Kasb
+                            tanlash</button>
+                    </a>
+                    <a href="./quiz.html">
+
+                        
+                        <button class="button-dark mx-2 d-none-btn" data-bs-toggle="modal"
+                            data-bs-target="#">Kirish test</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar end -->
+        <div class="quiz-wrapper">
+            <div class="quiz-info_wrapper">
+
+                <div class="mt-5 content">
+
+                    <h2>Tugadi !</h2>
+                    <p>Sizga Front End dasturchi kasbi <span class="text-warning">83% </span>mos keladi.</p>
+                </div>
+
+
+
+                <div class="content2">
+                    <p class="mt-4">
+                        <span class="text-bold">Front End</span> – bu turli xil web-saytlar, web-ilovalarning bizga
+                        ko’rinib
+                        turgan qismi hisoblanadi. Siz ko’rgan barcha saytlardagi turli xil animatsiyalar, tugmalar,
+                        matnlar,
+                        rasmlar va boshqa barcha bizga ko’rinib turgan qismi Front Endga kiradi.
+                    </p>
+                    <p class="mt-4">
+                        <span class="text-bold">Front End dasturchi</span> – bu o’sha saytni Front End qismini
+                        yaratuvchi
+                        dasturchi hisoblanadi.
+                    </p>
+
+
+                    <p class="mt-4">
+                        <span class="text-bold">ROBOCODE IT ACADEMY</span> sizga ushbu kasbni egalishingizda o’z
+                        kurslarini va
+                        malakali dasturchilarini taklif etadi!
+                    </p>
+
+                    </p>
+                </div>
+
+                <button class="button-light mb-4  mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Bepul sinov
+                    darsiga
+                    yozilish</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade login-modal sign-up-modal" id="exampleModal1" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button class="cross" data-bs-dismiss="modal" aria-label="Close"><img src="assets/icons/cross.svg"
+                        alt=""></button>
+
+                <h4 class="text-center">Qabul qilindi !</h4>
+
+                <p class="text-center">Tez orada siz bilan ko’rsatilgan raqam orqali bog’lanishadi.
+                    Agar uzrli sabablarga ko’ra siz bilan bog’lanishmasa <a href="">mana bu</a> manzilga telegram orqali
+                    yozing.
+                </p>
+
+
+
+                <!-- <button type="submit" class="button-light sign-in-btn">Bepul sinov darsiga yozilish</button> -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <a href="/" class="navbar-brand"><img src="assets/images/Logo.svg" alt=""></a>
+            <h3>Robocode IT Academy 2023 yil</h3>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

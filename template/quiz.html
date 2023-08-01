@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load unicorn %}
+{% block content %}
+<div class="container">
+    <div class="quiz-wrapper">
+        <div class="quiz-info_wrapper">
+            <!-- Quiz header -->
+            <div class="d-flex justify-content-between align-items-center mt-5">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="text-center h4">Front-End Quiz #23</h4>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="{% static './assets/icons/Group.svg' %}" alt="">
+                    <h4 class="h4 mx-2 my-3">15:36</h4>
+                </div>
+            </div>
+            <!-- Questions -->
+            <div class="d-flex justify-content-center align-items-center my-5">
+                <div class="answer_list">
+                    <h4 class="text-center fw-bold h4">Quyidagi kod natijasi qanday bo’ladi ?</h4>
+
+                    <div class="d-flex justify-content-start px-2 gap-2">
+                        <button class="answer "><i></i><span class="fw-bolder">a</span></button>
+                        <p class="w-75 fw-bolder p"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Accusantium,
+                            explicabo?</p>
+                    </div>
+                    <div class="d-flex justify-content-start  px-2 gap-2">
+                        <button class="answer"><i></i><span class="fw-bolder">b</span></button>
+                        <p class="w-75 fw-bolder p"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Accusantium,
+                            explicabo?</p>
+                    </div>
+                    <div class="d-flex justify-content-start px-2 gap-2">
+                        <button class="answer"><i></i><span class="fw-bolder">c</span></button>
+                        <p class="w-75 fw-bolder p"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Accusantium,
+                            explicabo?</p>
+                    </div>
+                    <div class="d-flex justify-content-start px-2 gap-2">
+                        <button class="answer"><i></i><span class="fw-bolder">d</span></button>
+                        <p class="w-75 fw-bolder p"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Accusantium,
+                            explicabo?</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question footer -->
+            <div class="d-flex align-items-center justify-content-between progress_wrapper">
+                <div class="d-flex align-items-center progress_bar_wrapper">
+                    <div id="progress">
+                        <span id="progress_bar"></span>
+                    </div>
+                    <span class="px-2">12/30</span>
+                </div>
+                <a href="./quiz _result.html"> <button
+                        class="button-success  mx-2 d-none-btn d-flex justify-content-end mb-4" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Davom etish</button>
+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

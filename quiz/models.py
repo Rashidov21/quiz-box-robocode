@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django_quill.fields import QuillField
 
 # Create your models here.
 
@@ -25,10 +25,12 @@ class LeadUser(models.model):
 
 
 class Quiz(models.Model):
-    author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    author = models.ForeignKey(LeadUser, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=255, default='')
     created_at = models.DateTimeField(auto_now_add=True)
     times_taken = models.IntegerField(default=0, editable=False)
+    image = models.ImageField(
+        upload_to='quiz_image/', blank=True, null=True)
 
     @property
     def question_count(self):
@@ -43,4 +45,24 @@ class Quiz(models.Model):
         return self.title
 
 
+class Question(models.Model):
+    label = QuillField()
+    order = models.PositiveIntegerField(blank=True, null=True)
+    point = models.PositiveIntegerField(default=3.3)
+    image = models.ImageField(
+        upload_to='question_image/', blank=True, null=True)
+    quiz = models.ForeignKey(
+        Quiz, on_delete=models.CASCADE, related_name='questions')
 
+    def __str__(self):
+        return str(self.label)
+
+
+class Answer(models.Model):
+    text = models.TextField(max_length=150)
+    is_correct = models.BooleanField(default=False)
+    question = models.ForeignKey(
+        Question, on_delete=models.CASCADE, related_name='answers')
+
+    def __str__(self):
+        return str(self.text)
